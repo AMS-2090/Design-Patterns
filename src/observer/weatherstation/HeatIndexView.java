@@ -2,9 +2,9 @@ package observer.weatherstation;
 
 public class HeatIndexView implements Observer, DisplayElement {
 	private double heatIndex = 0.0;
-	private WeatherData weatherData;
+	private Subject weatherData;
 
-	public HeatIndexView(WeatherData weatherData) {
+	public HeatIndexView(Subject weatherData) {
 		this.weatherData = weatherData;
 		weatherData.addObserver(this);
 	}
