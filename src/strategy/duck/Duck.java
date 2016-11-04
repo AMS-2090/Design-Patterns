@@ -3,8 +3,8 @@ package strategy.duck;
 public abstract class Duck {
 	
 	// interfaces variables
-	Flyable flyInterface;
-	Quackable quackInterface;
+	protected Flyable flyInterface;
+	protected Quackable quackInterface;
 	
 	public Duck() {
 	}

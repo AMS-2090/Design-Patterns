@@ -1,14 +1,14 @@
 package strategy.duck;
 
-public class DuckModel extends Duck {
+public class RubberDuck extends Duck {
 
-	public DuckModel() {
+	public RubberDuck() {
 		flyInterface = new NotFlyer();
 		quackInterface = new Quacker();
 	}
 	
 	public void show() {
-		System.out.println("I am a Duck Model!");
+		System.out.println("I am a Rubber Duck!");
 	}
 
 }

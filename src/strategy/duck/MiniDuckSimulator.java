@@ -4,18 +4,32 @@ public class MiniDuckSimulator {
 
 	public static void main(String[] args) {
 
+		/*
+		 * WildDuck
+		 */
 		System.out.println("Wild Duck creating...");
 		Duck duck = new WildDuck();
 		duck.swim();
 		duck.executeFly();
 		duck.executeQuack();
 		
-		System.out.println("---\nDuck Model creating...");
-		Duck model = new DuckModel();
-		model.executeFly();
+		/*
+		 * RubberDuck
+		 */
+		System.out.println("---\nRubber Duck creating...");
+		Duck rubberDuck = new RubberDuck();
+		rubberDuck.executeFly();
 		System.out.println("changing to rocket propulsion...");
-		model.setFlyInterface(new RocketPropFlyer());
-		model.executeFly();
+		rubberDuck.setFlyInterface(new RocketPropFlyer());
+		rubberDuck.executeFly();
+		
+		/*
+		 * SqueakyDuck
+		 */
+		System.out.println("---\nSqueaky Duck creating...");
+		Duck squeakyDuck = new SqueakyDuck();
+		squeakyDuck.executeFly();
+		squeakyDuck.executeQuack();
 	}
 
 }
