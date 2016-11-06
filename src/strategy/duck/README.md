@@ -4,4 +4,4 @@
 > interchangeable. Strategy lets the algorithm vary independently from clients
 > that use it.
 
-![Alt text](Design-Patterns/UMLs/strategy/MiniDuckSimulator_Class_Diagram.jpg "MiniDuckSimulator Class Diagram")
+![MiniDuckSimulator Class Diagram](/UMLs/strategy/MiniDuckSimulator_Class_Diagram.png)
