@@ -1,2 +1,3 @@
 # Design-Patterns
-Java examples of main design patterns.
+
+It will be a collection of Java examples of main design patterns.
