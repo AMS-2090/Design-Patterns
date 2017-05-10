@@ -1,4 +1,4 @@
-package strategy.duck;
+package strategy.miniDuckSimulator;
 
 public class Squeaker implements Quackable {
 	
