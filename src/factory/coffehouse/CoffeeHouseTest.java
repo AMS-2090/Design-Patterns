@@ -19,11 +19,24 @@ public class CoffeeHouseTest {
 		orders[3] = new Order(CoffeeType.CHEMEX,
 							CoffeeSize.MEDIUM);
 		
+		System.out.println("Brazilian Coffee Factory:\n");
+		
 		for(Order order : orders) {
 			coffeeHouse.serve(order);
 			System.out.println();
 		}
 		
+		System.out.println("---------------------------");
+		/************************************************/
+		
+		CoffeeHouse coffeeHouse2 = new CoffeeHouse(new EthiopiaCoffeeFactory());
+
+		System.out.println("Ethiopian Coffee Factory:\n");
+		
+		for(Order order : orders) {
+			coffeeHouse2.serve(order);
+			System.out.println();
+		}
 	}
 
 }
