@@ -40,7 +40,7 @@ public class BrazilCoffeeFactory implements CoffeeFactory {
 		Coffee latte = new Latte(coffeeSize);
 		latte.setBeansType(beansType);
 		latte.setMachineUsed("9-Bar Coffee Machine");
-		latte.setName("brazilian cappuccino");
+		latte.setName("brazilian latte");
 		latte.setGrindSize(GrindSize.MEDIUM_FINE);
 		
 		Milk steamedMilk = new SteamedMilk(milkFactory);
