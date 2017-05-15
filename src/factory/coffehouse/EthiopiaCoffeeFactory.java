@@ -57,8 +57,8 @@ public class EthiopiaCoffeeFactory implements CoffeeFactory {
 		chemex.setName("ethiopian chemex");
 		chemex.setGrindSize(GrindSize.MEDIUM_COARSE);
 		
-		Milk hotMilk = new HotMilk(milkFactory);
-		chemex.setMilk(hotMilk.prepare());
+		//Milk hotMilk = new HotMilk(milkFactory);
+		//chemex.setMilk(hotMilk.prepare());
 		
 		return chemex;
 	}

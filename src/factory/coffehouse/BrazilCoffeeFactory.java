@@ -57,8 +57,8 @@ public class BrazilCoffeeFactory implements CoffeeFactory {
 		chemex.setName("brazilian chemex");
 		chemex.setGrindSize(GrindSize.MEDIUM_COARSE);
 		
-		Milk hotMilk = new HotMilk(milkFactory);
-		chemex.setMilk(hotMilk.prepare());
+		//Milk hotMilk = new HotMilk(milkFactory);
+		//chemex.setMilk(hotMilk.prepare());
 		
 		return chemex;
 	}
