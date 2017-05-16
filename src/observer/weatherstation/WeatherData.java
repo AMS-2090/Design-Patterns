@@ -32,7 +32,7 @@ public class WeatherData implements Subject {
 		}
 	}
 	
-	public void valuesChange() {
+	private void valuesChange() {
 		tellObservers();
 	}
 	
