@@ -9,3 +9,6 @@ It will be a collection of Java examples of main design patterns.
 ### Creational design patterns
 * [Factory](/src/factory/coffehouse)
 * Singleton
+
+### Structural design patterns
+* [Decorator](/src/decorator/coffee)
