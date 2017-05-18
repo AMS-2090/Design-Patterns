@@ -55,6 +55,11 @@ public class CoffeeShop {
 		System.out.println(espressoMedium.getDescription());
 		System.out.println("price: " + espressoMedium.cost() + "\n");
 		
+		/* add Chocolate */
+		espressoMedium = new Chocolate(espressoMedium);
+		System.out.println(espressoMedium.getDescription());
+		System.out.println("price: " + espressoMedium.cost() + "\n");
+		
 	}
 
 }
