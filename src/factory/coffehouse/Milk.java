@@ -5,6 +5,10 @@ public abstract class Milk {
 	protected MilkFactory milkFactory;
 	protected String name;
 	
+	public Milk(MilkFactory milkFactory) {
+		this.milkFactory = milkFactory;
+	}
+	
 	public String prepare() {
 		
 		StringBuilder milk = new StringBuilder(name);

@@ -3,7 +3,7 @@ package factory.coffehouse;
 public class HotMilk extends Milk {
 
 	public HotMilk(MilkFactory milkFactory) {
-		this.milkFactory = milkFactory;
+		super(milkFactory);
 		this.name = "hot milk";
 	}
 
