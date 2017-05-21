@@ -72,8 +72,8 @@ public abstract class Coffee {
 	}
 	
 	public String toString() {
-		StringBuilder sb = new StringBuilder(coffeeSize.toString());
-		sb.append(" ").append(coffeeType).append(" brewed using ")
+		StringBuilder sb = new StringBuilder(name);
+		sb.append(":\n\t").append(coffeeSize.toString()).append(" ").append(coffeeType).append(" brewed using ")
 		.append(beansType).append(" beans,\n\tfrom ").append(machineUsed);
 		
 		if (milk != null) {

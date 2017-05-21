@@ -12,10 +12,11 @@ public class BrazilCoffeeFactory implements CoffeeFactory {
 
 	@Override
 	public Coffee prepareEspresso(CoffeeSize coffeeSize) {
-		Coffee espresso = new Espresso(coffeeSize);
+		//Coffee espresso = new Espresso(coffeeSize);
+		Coffee espresso = new BrazilianEspresso(coffeeSize);
 		espresso.setBeansType(beansType);
 		espresso.setMachineUsed("9-Bar Coffee Machine");
-		espresso.setName("brazilian espresso");
+		//espresso.setName("brazilian espresso");
 		espresso.setGrindSize(GrindSize.MEDIUM_FINE);
 		
 		return espresso;
