@@ -12,11 +12,9 @@ public class BrazilCoffeeFactory implements CoffeeFactory {
 
 	@Override
 	public Coffee prepareEspresso(CoffeeSize coffeeSize) {
-		//Coffee espresso = new Espresso(coffeeSize);
 		Coffee espresso = new BrazilianEspresso(coffeeSize);
 		espresso.setBeansType(beansType);
 		espresso.setMachineUsed("9-Bar Coffee Machine");
-		//espresso.setName("brazilian espresso");
 		espresso.setGrindSize(GrindSize.MEDIUM_FINE);
 		
 		return espresso;
@@ -24,10 +22,9 @@ public class BrazilCoffeeFactory implements CoffeeFactory {
 
 	@Override
 	public Coffee prepareCappuccino(CoffeeSize coffeeSize) {
-		Coffee cappuccino = new Cappuccino(coffeeSize);
+		Coffee cappuccino = new BrazilianCappuccino(coffeeSize);
 		cappuccino.setBeansType(beansType);
 		cappuccino.setMachineUsed("9-Bar Coffee Machine");
-		cappuccino.setName("brazilian cappuccino");
 		cappuccino.setGrindSize(GrindSize.MEDIUM_FINE);
 		
 		Milk milkFoam = new MilkFoam(milkFactory);
@@ -38,10 +35,9 @@ public class BrazilCoffeeFactory implements CoffeeFactory {
 
 	@Override
 	public Coffee prepareLatte(CoffeeSize coffeeSize) {
-		Coffee latte = new Latte(coffeeSize);
+		Coffee latte = new BrazilianLatte(coffeeSize);
 		latte.setBeansType(beansType);
 		latte.setMachineUsed("9-Bar Coffee Machine");
-		latte.setName("brazilian latte");
 		latte.setGrindSize(GrindSize.MEDIUM_FINE);
 		
 		Milk steamedMilk = new SteamedMilk(milkFactory);
@@ -52,10 +48,9 @@ public class BrazilCoffeeFactory implements CoffeeFactory {
 
 	@Override
 	public Coffee prepareChemex(CoffeeSize coffeeSize) {
-		Coffee chemex = new Chemex(coffeeSize);
+		Coffee chemex = new BrazilianChemex(coffeeSize);
 		chemex.setBeansType(beansType);
 		chemex.setMachineUsed("Chemex vessel");
-		chemex.setName("brazilian chemex");
 		chemex.setGrindSize(GrindSize.MEDIUM_COARSE);
 		
 		//Milk hotMilk = new HotMilk(milkFactory);
