@@ -8,7 +8,7 @@ It will be a collection of Java examples of main design patterns.
 
 ### Creational design patterns
 * [Factory](/src/factory/coffehouse)
-* Singleton
+* [Singleton](/src/singleton)
 
 ### Structural design patterns
 * [Decorator](/src/decorator/coffee)
