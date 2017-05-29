@@ -11,6 +11,13 @@ package singleton.dclock;
 
 public class Singleton {
 
+	/*
+	 * 'volatile' keyword is needed to ensure that every value change
+	 * of a volatile variable, made by one thread, will be immediately
+	 * written into main memory (not just into CPU cache of this thread).
+	 * Main memory is shared between threads, so another thread can read
+	 * the most recent value of the variable.
+	 */
 	private volatile static Singleton uniqueInstance;
 	
 	private Singleton() {}
