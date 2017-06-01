@@ -5,15 +5,24 @@ public class HomeKitTest {
 	public static void main(String[] args) {
 		
 		HomeKit homeKit = new HomeKit();
-		RollerBlinds rollerBlinds = new RollerBlinds();
-		RollerBlindsCommandUp rollerBlindsUp = new RollerBlindsCommandUp(rollerBlinds);
-		RollerBlindsCommandDown rollerBlindsDown = new RollerBlindsCommandDown(rollerBlinds);
 		
-		homeKit.setCommand(rollerBlindsUp);
-		homeKit.launch();
+		// Roller Blinds
+		RollerBlinds rollerBlindsBedroom = new RollerBlinds("Bedroom");
+		RollerBlindsCommandUp rollerBlindsUpBedroom = new RollerBlindsCommandUp(rollerBlindsBedroom);
+		RollerBlindsCommandDown rollerBlindsDownBedroom = new RollerBlindsCommandDown(rollerBlindsBedroom);
 		
-		homeKit.setCommand(rollerBlindsDown);
-		homeKit.launch();
+		// Air Conditioner
+		AirConditioner airConditionerLivingRoom = new AirConditioner("Living Room", 20);
+		AirConditionerCommandOn airConditionerOnLivingRoom = new AirConditionerCommandOn(airConditionerLivingRoom);
+		AirConditionerCommandOff airConditionerOffLivingRoom = new AirConditionerCommandOff(airConditionerLivingRoom);
+		
+		homeKit.setCommand("rbBedroom", rollerBlindsUpBedroom, rollerBlindsDownBedroom);
+		homeKit.launch("rbBedroom");
+		homeKit.shutDown("rbBedroom");
+		
+		homeKit.setCommand("acLivingRooom", airConditionerOnLivingRoom, airConditionerOffLivingRoom);
+		homeKit.launch("acLivingRooom");
+		homeKit.shutDown("acLivingRooom");
 	}
 
 }

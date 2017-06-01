@@ -15,7 +15,7 @@ public class AirConditioner {
 	}
 	
 	public void on() {
-		System.out.println("Air conditioner in " + location + " is ON and set to " + temperature + " C deg.");
+		System.out.println("Air conditioner at " + location + " is ON and set to " + temperature + " C deg.");
 	}
 	
 	public void off() {
