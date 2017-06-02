@@ -16,6 +16,11 @@ public class HomeKitTest {
 		AirConditionerCommandOn airConditionerOnLivingRoom = new AirConditionerCommandOn(airConditionerLivingRoom);
 		AirConditionerCommandOff airConditionerOffLivingRoom = new AirConditionerCommandOff(airConditionerLivingRoom);
 		
+		// Light
+		Light lightHall = new Light("Hall");
+		LightCommandOn lightOnHall = new LightCommandOn(lightHall);
+		LightCommandOff lightOffHall = new LightCommandOff(lightHall);
+		
 		homeKit.setCommand("rbBedroom", rollerBlindsUpBedroom, rollerBlindsDownBedroom);
 		homeKit.launch("rbBedroom");
 		homeKit.shutDown("rbBedroom");
@@ -23,6 +28,10 @@ public class HomeKitTest {
 		homeKit.setCommand("acLivingRooom", airConditionerOnLivingRoom, airConditionerOffLivingRoom);
 		homeKit.launch("acLivingRooom");
 		homeKit.shutDown("acLivingRooom");
+		
+		homeKit.setCommand("lightHall", lightOnHall, lightOffHall);
+		homeKit.launch("lightHall");
+		homeKit.shutDown("lightHall");
 		
 		System.out.println();
 		System.out.println(homeKit.toString());
