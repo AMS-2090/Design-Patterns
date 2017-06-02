@@ -23,6 +23,9 @@ public class HomeKitTest {
 		homeKit.setCommand("acLivingRooom", airConditionerOnLivingRoom, airConditionerOffLivingRoom);
 		homeKit.launch("acLivingRooom");
 		homeKit.shutDown("acLivingRooom");
+		
+		System.out.println();
+		System.out.println(homeKit.toString());
 	}
 
 }
