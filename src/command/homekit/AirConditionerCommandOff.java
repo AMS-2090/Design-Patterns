@@ -14,4 +14,10 @@ public class AirConditionerCommandOff implements Command {
 		airConditioner.off();
 	}
 
+
+	@Override
+	public void undo() {
+		airConditioner.on();
+	}
+
 }

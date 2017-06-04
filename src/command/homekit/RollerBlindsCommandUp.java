@@ -12,5 +12,9 @@ public class RollerBlindsCommandUp implements Command {
 	public void execute() {
 		rollerBlinds.up();
 	}
+	
+	public void undo() {
+		rollerBlinds.down();
+	}
 
 }
