@@ -7,10 +7,12 @@ public class HomeKit {
 
 	Map<String, Command> onCommandMap;
 	Map<String, Command> offCommandMap;
+	Command undoCommand;
 	
 	public HomeKit() {
 		onCommandMap = new LinkedHashMap<>();
 		offCommandMap = new LinkedHashMap<>();
+		undoCommand = new EmptyCommand();
 	}
 
 	public void setCommand(String device, Command onCommand, Command offCommand) {
@@ -20,10 +22,16 @@ public class HomeKit {
 	
 	public void launch(String device) {
 		onCommandMap.get(device).execute();
+		undoCommand = onCommandMap.get(device);
 	}
 	
 	public void shutDown(String device) {
 		offCommandMap.get(device).execute();
+		undoCommand = offCommandMap.get(device);
+	}
+	
+	public void cancelLast() {
+		undoCommand.undo();
 	}
 
 	@Override
@@ -44,7 +52,10 @@ public class HomeKit {
 			cmdOff.append(key).append(", command class: ").append(cmdClass).append('\n');
 		}
 		
-		return cmdOn.append('\n').append(cmdOff).toString();
+		cmdOn.append('\n').append(cmdOff);
+		cmdOn.append('\n').append("last undo command: ").append(undoCommand.getClass().getName());
+		
+		return cmdOn.append('\n').toString();
 	}
 	
 }

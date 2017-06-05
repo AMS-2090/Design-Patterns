@@ -24,14 +24,17 @@ public class HomeKitTest {
 		homeKit.setCommand("rbBedroom", rollerBlindsUpBedroom, rollerBlindsDownBedroom);
 		homeKit.launch("rbBedroom");
 		homeKit.shutDown("rbBedroom");
+		homeKit.cancelLast();
 		
 		homeKit.setCommand("acLivingRooom", airConditionerOnLivingRoom, airConditionerOffLivingRoom);
 		homeKit.launch("acLivingRooom");
 		homeKit.shutDown("acLivingRooom");
+		homeKit.cancelLast();
 		
 		homeKit.setCommand("lightHall", lightOnHall, lightOffHall);
 		homeKit.launch("lightHall");
 		homeKit.shutDown("lightHall");
+		homeKit.cancelLast();
 		
 		System.out.println();
 		System.out.println(homeKit.toString());
