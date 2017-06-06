@@ -30,7 +30,7 @@ public class HomeKit {
 		undoCommand = offCommandMap.get(device);
 	}
 	
-	public void cancelLast() {
+	public void cancelLastCmd() {
 		undoCommand.undo();
 	}
 
