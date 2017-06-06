@@ -4,22 +4,45 @@ public class AirConditioner {
 
 	private String location;
 	private int temperature;
+	private String state;
 	
 	public AirConditioner(String location, int temperature) {
 		this.location = location;
 		this.temperature = temperature;
 	}
 	
+	public int getTemperature() {
+		return temperature;
+	}
+	
 	public void setTemperature(int temperature) {
+		if (state.equalsIgnoreCase("ON")) {
+			state = "ON";
+		}
 		this.temperature = temperature;
+		System.out.println(this.toString());
 	}
 	
 	public void on() {
-		System.out.println("Air conditioner at " + location + " is ON and set to " + temperature + " C deg.");
+		state = "ON";
+		System.out.println(this.toString());
 	}
 	
 	public void off() {
-		System.out.println("Air conditioner at " + location + " is OFF.");
+		state = "OFF";
+		System.out.println(this.toString());
+	}
+	
+	public String toString() {
+		StringBuilder info = new StringBuilder("Air conditioner at ");
+		info.append(location).append(" is " + state);
+		if (state.equalsIgnoreCase("ON")) {
+			info.append(" and set to ").append(temperature).append(" C deg.");
+		} else {
+			info.append('.');
+		}
+		
+		return info.toString();
 	}
 	
 }
