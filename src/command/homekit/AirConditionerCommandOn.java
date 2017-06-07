@@ -2,7 +2,7 @@ package command.homekit;
 
 public class AirConditionerCommandOn implements Command {
 
-	AirConditioner airConditioner;
+	private AirConditioner airConditioner;
 	
 	public AirConditionerCommandOn(AirConditioner airConditioner) {
 		this.airConditioner = airConditioner;

@@ -2,7 +2,7 @@ package command.homekit;
 
 public class LightCommandOn implements Command {
 
-	Light light;
+	private Light light;
 	
 	public LightCommandOn(Light light) {
 		this.light = light;

@@ -5,9 +5,9 @@ import java.util.Map;
 
 public class HomeKit {
 
-	Map<String, Command> onCommandMap;
-	Map<String, Command> offCommandMap;
-	Command undoCommand;
+	private Map<String, Command> onCommandMap;
+	private Map<String, Command> offCommandMap;
+	private Command undoCommand;
 	
 	public HomeKit() {
 		onCommandMap = new LinkedHashMap<>();

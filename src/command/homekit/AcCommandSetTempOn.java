@@ -2,7 +2,7 @@ package command.homekit;
 
 public class AcCommandSetTempOn implements Command {
 
-	AirConditioner airConditioner;
+	private AirConditioner airConditioner;
 	private int temperature;
 	private int prevTemperature;
 	
