@@ -13,5 +13,5 @@ It will be a collection of Java examples of main design patterns.
 
 ### Structural design patterns
 * [Decorator](/src/decorator/coffee)
-* Adapter
+* [Adapter](/src/adapter)
 * Facade
