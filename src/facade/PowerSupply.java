@@ -12,12 +12,12 @@ public class PowerSupply {
 	
 	public void on() {
 		state = true;
-		System.out.println("Battery is online.");
+		System.out.println("> Battery is online");
 	}
 	
 	public void off() {
 		state = false;
-		System.out.println("Battery is offline.");
+		System.out.println("Battery is offline");
 	}
 	
 	public boolean getState() {

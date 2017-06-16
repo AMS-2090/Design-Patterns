@@ -2,19 +2,19 @@ package facade;
 
 public class SensorsModule {
 	
-	/* TODO sensors
-	 * 3-axis gyroscope
-	 * 3-axis accelerometers
-	 * compass
-	 * barometer
-	 */
-	
-	public void setUpSensors() {
-		initGyroscope();
-		
+	public void initGyroscope() {
+		System.out.println("> 3-axis gyroscope initialized");
 	}
 	
-	private void initGyroscope() {
-		System.out.println("3-axis gyroscope initialized.");
+	public void initAccelerometer() {
+		System.out.println("> 3-axis accelerometer initialized");
+	}
+	
+	public void initCompass() {
+		System.out.println("> Compass initialized");
+	}
+	
+	public void initBarometer() {
+		System.out.println("> Barometer initialized");
 	}
 }
