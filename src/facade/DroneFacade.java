@@ -55,19 +55,25 @@ public class DroneFacade {
 	}
 	
 	public void land() {
-		
+		// TODO: landing procedure
+		//hover();
+		fcb.setFallSpeed(-1);
 	}
 	
 	public void hover() {
-		
+		// TODO: hovering procedure
 	}
 	
-	public void recordVideo() {
-		
+	public void recordVideoStart() {
+		// TODO: record video start
+	}
+	
+	public void recordVideoStop() {
+		// TODO: record video stop
 	}
 	
 	public void returnToBase() {
-		
+		// TODO: return to base procedure
 	}
 
 	
