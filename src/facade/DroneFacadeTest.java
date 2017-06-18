@@ -22,6 +22,7 @@ public class DroneFacadeTest {
 											gps);
 		
 		drone.start();
+		drone.land();
 	}
 
 }
