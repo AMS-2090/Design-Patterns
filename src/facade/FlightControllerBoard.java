@@ -35,5 +35,28 @@ public class FlightControllerBoard {
 		gps.initGps();
 	}
 
+	public void setZSpeed(ActuatorsModule actuators, float verticalSpeed) {
+		actuators.controlLinearSpeed('z', verticalSpeed);
+	}
+	
+	public void setXSpeed(ActuatorsModule actuators, float horizontalXSpeed) {
+		actuators.controlLinearSpeed('x', horizontalXSpeed);
+	}
+	
+	public void setYSpeed(ActuatorsModule actuators, float horizontalYSpeed) {
+		actuators.controlLinearSpeed('y', horizontalYSpeed);
+	}
+
+	public void setZRotateSpeed(ActuatorsModule actuators, float zRotateSpeed) {
+		actuators.controlAngularSpeed('z', zRotateSpeed);
+	}
+	
+	public void setXRotateSpeed(ActuatorsModule actuators, float xRotateSpeed) {
+		actuators.controlAngularSpeed('x', xRotateSpeed);
+	}
+	
+	public void setYRotateSpeed(ActuatorsModule actuators, float yRotateSpeed) {
+		actuators.controlAngularSpeed('y', yRotateSpeed);
+	}
 	
 }
