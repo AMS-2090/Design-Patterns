@@ -55,13 +55,25 @@ public class DroneFacade {
 	}
 	
 	public void land() {
-		// TODO: landing procedure
-		//hover();
-		fcb.setFallSpeed(-1);
+		System.out.println("* Preparing to land...");
+		hover();
+		System.out.println(">>> Landing... <<<");
+		fcb.setZSpeed(actuators, -1);
 	}
 	
 	public void hover() {
-		// TODO: hovering procedure
+		System.out.println("* Hovering mode");
+		
+		float linearSpeed = 0;
+		float angularSeed = 0;
+		
+		fcb.setXSpeed(actuators, linearSpeed);
+		fcb.setYSpeed(actuators, linearSpeed);
+		fcb.setZSpeed(actuators, linearSpeed);
+		
+		fcb.setXRotateSpeed(actuators, angularSeed);
+		fcb.setYRotateSpeed(actuators, angularSeed);
+		fcb.setZRotateSpeed(actuators, angularSeed);
 	}
 	
 	public void recordVideoStart() {
