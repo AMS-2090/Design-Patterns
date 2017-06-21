@@ -15,26 +15,26 @@ public abstract class CoffeeMaker {
 		pourIntoCup();
 	}
 	
-	public final void boilWater() {
+	private final void boilWater() {
 		System.out.println("Boiling water...");
 	}
 	
 	/*
 	 * Each coffee type needs specific grind size.
 	 */
-	public abstract void grindBeans();
+	protected abstract void grindBeans();
 	
 	/*
 	 * Each coffee type needs specific brew time.
 	 */
-	public abstract void brew();
+	protected abstract void brew();
 	
 	/*
 	 * withIngredients() method returns false by default.
 	 * Extending class can override it,
 	 * if it wants to add ingredients in addIngredients() method.
 	 */
-	public boolean withIngredients() {
+	protected boolean withIngredients() {
 		return false;
 	}
 	
@@ -42,9 +42,9 @@ public abstract class CoffeeMaker {
 	 * addIngredients() method is a hook.
 	 * Extending class can override it, but doesn't have to.
 	 */
-	public void addIngredients() {}
+	protected void addIngredients() {}
 	
-	public final void pourIntoCup() {
+	private final void pourIntoCup() {
 		System.out.println("Pouring into cup...");
 	}
 	
