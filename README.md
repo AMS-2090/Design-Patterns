@@ -6,6 +6,7 @@ It will be a collection of Java examples of main design patterns.
 * [Strategy](/src/strategy/miniDuckSimulator)
 * [Observer](/src/observer)
 * [Command](/src/command/homekit)
+* [Template Method](/src/templatemethod)
 
 ### Creational design patterns
 * [Factory](/src/factory/coffehouse)
@@ -14,4 +15,4 @@ It will be a collection of Java examples of main design patterns.
 ### Structural design patterns
 * [Decorator](/src/decorator/coffee)
 * [Adapter](/src/adapter)
-* Facade
+* [Facade](/src/facade)
