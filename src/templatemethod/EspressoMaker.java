@@ -4,7 +4,7 @@ public class EspressoMaker extends CoffeeMaker {
 
 	@Override
 	protected void grindBeans() {
-		System.out.println("Medium-fine size beans grinding...");
+		System.out.println("'Fine' size beans grinding...");
 	}
 
 	@Override

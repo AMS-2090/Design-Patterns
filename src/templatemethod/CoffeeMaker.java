@@ -5,7 +5,7 @@ public abstract class CoffeeMaker {
 	/*
 	 * Template method
 	 */
-	public void makeCoffee() {
+	public final void makeCoffee() {
 		boilWater();
 		grindBeans();
 		brew();
